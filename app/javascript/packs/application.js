@@ -7,7 +7,21 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import Vue from 'vue'
+
+import '../stylesheets/application.scss'
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+Vue.config.performance = true
+Vue.config.productionTip = false
+
+Vue.component('MyVueComponent', () => import('../components/MyVueComponent'))
+
+document.addEventListener('turbolinks:load', () => {
+  new Vue({
+    el: document.querySelector('#vue-app')
+  })
+})
