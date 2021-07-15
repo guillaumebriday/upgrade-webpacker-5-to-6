@@ -1,24 +1,32 @@
-# README
+# Upgrade from Webpacker 5.x to 6.x
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Introduction
 
-Things you may want to cover:
+This repo is here to show you how to upgrade from [Webpacker 5](https://github.com/rails/webpacker/tree/5-x-stable) to [Webpacker 6](https://github.com/rails/webpacker) with [Vue](https://vuejs.org/) and [Sass](https://sass-lang.com/).
 
-* Ruby version
+You will find these two commits that show how to install Vue with Webpacker 5.x and then how to upgrade to Webpacker 6.x:
 
-* System dependencies
+1. [Using Vue with Webpacker 5.x](https://github.com/guillaumebriday/upgrade-webpacker-5-to-6/commit/26ec51494d602e5b39ac4aa5e2206c3ad9467b54)
 
-* Configuration
+2. [Upgrading to Webpacker 6.x](https://github.com/guillaumebriday/upgrade-webpacker-5-to-6/commit/650f39e3c20ab6b0c4c218867de2ca5c128bdeda)
 
-* Database creation
+## Usage
 
-* Database initialization
+You can run the application if you want to try it out:
 
-* How to run the test suite
+```bash
+$ git clone git@github.com:guillaumebriday/upgrade-webpacker-5-to-6.git
+$ cd upgrade-webpacker-5-to-6
+$ bundle install && yarn install
+$ bundle exec rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Then open [localhost:3000](http://localhost:3000).
 
-* Deployment instructions
+## Contributing
 
-* ...
+Do not hesitate to contribute to the project by adapting or adding features ! Bug reports or pull requests are welcome.
+
+## License
+
+This project is released under the [MIT](https://opensource.org/licenses/MIT) license.
