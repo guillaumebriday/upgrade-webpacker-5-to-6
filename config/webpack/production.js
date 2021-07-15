@@ -1,13 +1,12 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'production'
 
-const environment = require('./environment')
+const { merge } = require('@rails/webpacker')
+const webpackConfig = require('./base')
 
-environment.config.merge({
+module.exports = merge(webpackConfig, {
   resolve: {
     alias: {
       vue: 'vue/dist/vue.min'
     }
   }
 })
-
-module.exports = environment.toWebpackConfig()
